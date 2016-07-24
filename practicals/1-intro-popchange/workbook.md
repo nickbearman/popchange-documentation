@@ -5,7 +5,7 @@ output: pdf_document
 
 #Introduction to PopChange Resource and using PopChange with QGIS  
 
-![The PopChange website](images/home-page.png){ width=40% } 
+![The PopChange website](images/home-page.png){ width=50% } 
 
 ##Section 1: Using the PopChange web resource
 
@@ -22,25 +22,25 @@ This part of the practical shows you how to use the web resource to access the P
 
 - Click **Register**  
 - Once you have registered, you will be taken back to the PopChange home page  
-- To begin a comparison, login and fill in your details  
+- To begin a comparison, login using the details you have just registered with  
 - You will then see a screen similar to the one below:  
 
 ![Raster Calculation Visualisation](images/select-data.png){ width=50% }
 
 - This allows you to select an area and then select the year and data set you wish to compare  
 
-*The menus are dynamic in that they will only show you the possible comparisons based on the selections you have made so far. They will also highlight whether the comparison you have selected is meaningful (highlighted in green) or whether caution is needed (highlighted in yellow). If caution is needed, further information will be provided.*
+*The menus are dynamic in that they will only show you the possible comparisons based on the selections you have made so far. They will also highlight whether the comparison you have selected is meaningful (highlighted in green) or whether caution is needed (highlighted in yellow). If caution is needed, further information will be provided.*  
 
-- Select **1991 Age 30 to 34** as set 1 and **1981 Age 30 to 34** as set 2.  
-- Click **Generate**.  
-- The output will be displayed on a map of the right.  
-- This is a map you can move about and zoom in/out. There is also a transparency slider at the top to allow you to see the basemap.  
+- Select **1991** and **Age 30 to 34** as Set 1 and **1981** and **Age 30 to 34** as Set 2  
+- Click **Generate**  
+- The output will be displayed on a map of the right  
+- This is a map you can move about and zoom in/out <!-- There is also a transparency slider at the top to allow you to see the basemap -->  
 
 ![Raster Calculation Visualisation output](images/output-age-30-34.png){ width=50% }
 
-The results (as a JPEG or a GeoTIFF) can be downloaded from the links on the left. 
+The results (as a GeoTIFF for use in QGIS or a JPEG for use as a small image) can be downloaded from the links on the left. 
 
-You can see on the map where there have been high areas of change (green) and low areas of change (blue). Try some different combinations. 
+You can see on the map where there have been high areas of increase (dark red) and high areas of decrease (blue). Try some different combinations. 
 
 - Which of these combinations are sensible?   
 - Do the results seem realistic to you?  
@@ -61,22 +61,20 @@ To begin with, we need to download the data from the website. I will use the 199
 
 Click **Start**, type **QGIS** and click on **QGIS Desktop 2.10.1**
 
-If you get a QGIS Tips window (see below) you can tick the “I’ve had enough tips” tickbox to stop it opening every time you run QGIS.
-
-![QGIS Tips window](images/qgis-tips.png){ width=40% }
+If you get a QGIS Tips window, you can tick the “I’ve had enough tips” tickbox to stop it opening every time you run QGIS.
 
 Let’s start off by adding data to the map display.  
 
-- Start by clicking the Add Raster Layer ![Add Raster Layer tool](images/add-raster.png){ height=20 } button  
-- Then choose Browse and navigate to My Documents   
+- Start by clicking the **Add Raster Layer** ![Add Raster Layer tool](images/add-raster.png){ height=20 } button  
+- Then choose **Browse** and navigate to My Documents   
 - Select one of the ASCII GRID files you downloaded from the PopChange site  
-- Click Open  
+- Click **Open**  
 - QGIS will ask what coordinate system the files are stored in  
 - Type '27700' into the filter box and select 'OSGB 1936 / British National Grid'.  
 
 ![Selecting BNG as the Coordinate Reference System](images/select-crs.png){ width=50% }
 
-- Click OK.   
+- Click **OK**.   
 
 This will add a layer which shows Great Britain, with a series of values in black (0) to white (the maximum value in your data, in mine it was 219.55). 
   
@@ -124,24 +122,24 @@ We can also do the raster calculation of difference within QGIS, replicating wha
 - QGIS will ask what coordinate system the files are stored in  
 - Type '27700' into the filter box and select 'OSGB 1936 / British National Grid'.  
 - Click **OK**.   
-- Repeat the process for 1991 Age 25 to 29
-
+- Repeat the process for 1991 Age 25 to 29  
+  
 Your QGIS window should look similar to below:  
-
+  
 ![Raster layers](images/raster-calc-layers.png){ height=40% }
 
 - Click **Raster > Raster Calculator...**  
 - Click the **...** buy the output layer option  
 - Choose where to save the output (I called mine **grid2001-1991-change-25-29.tif**)  
 - Click **Save**  
-- Double click the 2001 layer  
-- Single click the minus (-) button  
-- Double click the 1991 layer  
+- Double click the **2001** layer  
+- Single click the minus (**-**) button  
+- Double click the **1991** layer  
 - You should have a calculation like this:  
 
 ![Raster calculator window](images/raster-calculator.png){ height=40% }
 
-- Click OK  
+- Click **OK**  
 
 QGIS should calculate the difference between the two raster layers. 
 
