@@ -102,7 +102,7 @@ The default symbology for a raster grid in QGIS is black to white, which is OK b
 - Change the selected value under Load min/max values to **Min / max**  
 - Click **Load**  
 - Click **Classify**  
-- Your screen should look like the screenshot over the page  
+- Your screen should look like the screenshot below  
 
 ![Raster layer Properties window](images/raster-layer-properties.png){ height=50% }
 
@@ -129,7 +129,7 @@ Your QGIS window should look similar to below:
 ![Raster layers](images/raster-calc-layers.png){ height=40% }
 
 - Click **Raster > Raster Calculator...**  
-- Click the **...** buy the output layer option  
+- Click the **...** by the output layer option  
 - Choose where to save the output (I called mine **grid2001-1991-change-25-29.tif**)  
 - Click **Save**  
 - Double click the **2001** layer  
@@ -155,10 +155,11 @@ So far we have been using the raster version of the data. If you prefer to work 
 - On the PopChange website click the **Data** tab   
 - Right click on **vector_grid.zip** and choose **Save target as...**  
 - Save the file in your My Documents folder  
+- Extract the files from vector_grid.zip by right-clicking on it, choosing **Extract All...** and follow the on-screen instructions  
 
 We also need the lookup table for the variable we are using
 
-- Go to http://popchange.liverpool.ac.uk/data  
+- On the PopChange website click the **Data** tab  
 - Click **Age**  
 - Click **1991**  
 - Right click on **lookup_1991_Age_Age30_34.csv** and choose **Save target as...**  
@@ -169,13 +170,13 @@ In order to join tabular data it is necessary that both of your datasets have a 
 
 - Click the **Add Vector Layer** ![Add Vector Layer tool](images/add-vector.png){ height=20 } button  
 - Then choose **Browse** and navigate to whichever folder you saved the **vector_grid.zip** data    
-- Select the **vector_grid.shp** file
+- Select the **vector_grid.shp** file  
 - click **Open**  
 - click **Open**  
 - Right click on the vector_grid layer and select **Open Attribute Table**. You’ll see that the GRIDCODE field is unique for each grid cell.   
 - Close the Attribute table.  
 
-The vector lookup table is saved as a CSV file (lookup_1991_Age_Age30_34.csv). Open it in Excel if you wish to take a look. We also have a CSVT file which stores the field types (lookup_1991_Age_Age30_34.csvt)/ 
+The vector lookup table is saved as a CSV file (lookup_1991_Age_Age30_34.csv). Open it in Excel if you wish to take a look. We also have a CSVT file which stores the field types (lookup_1991_Age_Age30_34.csvt) 
 
 The fields we are joining are CODE from the vector grid file and grid_ID from the Lookup table. 
 
@@ -183,7 +184,7 @@ Now that we’ve identified the two fields in our datasets that we will use to m
 
 - Firstly, add the lookup table using **Add Vector Layer** ![Add Vector Layer tool](images/add-vector.png){ height=20 } button  
 - Click on this now and **Browse** to where you have saved the data files  
-- Select *lookup_1991_Age_Age30_34.csv* (if it doesn’t show, change the box next to File Name from ESRI Shapefiles to All files) and click Open, and click Open again  
+- Select **lookup_1991_Age_Age30_34.csv** (if it doesn’t show, change the box next to File Name from ESRI Shapefiles to All files) and click Open, and click Open again  
 
 The table will now appear as a layer in the Layers window:
 
@@ -193,7 +194,7 @@ Right-click on the table and Open Attribute Table to check that the data appear 
 
 Now we will join this table layer with your spatial data. Right-click on the vector_grid layer, select Properties and click on the Joins option
 
-Click on the plus  button to create a new join. The Add Vector Join dialogue box will now open
+Click on the plus  button to create a new join. The Add Vector Join dialogue box will now open.  
 
 - Make sure that pop_2011 is selected in the **Join layer** dropdown box  
 - **grid_ID** should be selected in the **Join field** dropdown box  
@@ -201,7 +202,7 @@ Click on the plus  button to create a new join. The Add Vector Join dialogue box
 
 ![Add Vector Join window](images/join-2.png){ height=30% }
 
-Hit OK on the Add vector join window and also in the Layer Properties window
+Hit **OK** on the Add vector join window and also in the Layer Properties window
 
 Open Attribute Table of vector_grid and you will see that a new field (named lookup_1991_Age_Age30_34) has been added to the Attribute table! Please ask for help if this is not the case.
 
@@ -227,7 +228,9 @@ We can select out data for a specific local authority or any other shape file bo
 - Right click on the layer, and choose **Save As**  
 - Click **Browse** and choose a suitable file name  
 - Click **Save** and **OK**  
-- This will add a new layer into QGIS with the correct projection information. Continue using this information below  
+- This will add a new layer into QGIS with the correct projection information. 
+
+We can then download the data we want to use.  
 
 - On the PopChange website click the **Data** tab   
 - Click **local_authority_boundaries**  
@@ -252,7 +255,7 @@ Alternatively, you can select out your own local authority from the whole data f
 
 - On the PopChange website click the **Data** tab     
 - Click **local_authority_boundaries**  
-- Right click on **LA_split.zip** and choose **Save target as...***  
+- Right click on **LA_split.zip** and choose **Save target as...**  
 - Save the file into **My Documents**  
 - Extract the files  by double-clicking the file and following the instructions  
 - Open QGIS  
