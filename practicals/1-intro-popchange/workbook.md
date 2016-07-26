@@ -33,7 +33,7 @@ This part of the practical shows you how to use the web resource to access the P
 
 - Select **1991** and **Age 30 to 34** as Set 1 and **1981** and **Age 30 to 34** as Set 2  
 - Click **Generate**  
-- The output will be displayed on a map of the right  
+- The output will be displayed on a map on the right  
 - This is a map you can move about and zoom in/out <!-- There is also a transparency slider at the top to allow you to see the basemap -->  
 
 ![Raster Calculation Visualisation output](images/output-age-30-34.png){ width=50% }
@@ -45,6 +45,8 @@ You can see on the map where there have been high areas of increase (dark red) a
 - Which of these combinations are sensible?   
 - Do the results seem realistic to you?  
 - Which combinations should be used with caution? Why?   
+
+You also have the option of limiting the map to a Local Authority of your choice (under the Area option) or excluding cells with a low population count (defined as <= 25 people). 
 
 ##Section 2: Using PopChange data with QGIS
 
@@ -301,4 +303,4 @@ PopChange is funded by the Economic and Social Research Council (ESRC) under the
 
 This practical was written by Nick Bearman (nick@clearmapping.co.uk) for QGIS 2.10.1. This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/deed.en.  
 
-The latest version of the PDF is available from https://github.com/ClearMappingCo/popchange-resources. This practical is written in Markdown, and compiled using Pandoc 1.17.1, tested on Windows 7 and OSX Yosemite (10.10.5).
+The latest version of the PDF is available from https://github.com/ClearMappingCo/popchange-documentation. This practical is written in Markdown, and compiled using Pandoc 1.17.1, tested on Windows 7 and OSX Yosemite (10.10.5).
