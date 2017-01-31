@@ -22,13 +22,13 @@ Firstly, we need to download some data.
 - Navigate to the PopChange website [http://popchange.liverpool.ac.uk](http://popchange.liverpool.ac.uk), login and pick two variables to perform a comparison. I will be comparing Age 0 - 14 count between 2011 and 2001 for Great Britain. *More details are available in the first practical.* 
 - Select the **Download GeoTIFF** link to download the data in a GeoTIFF format. Save this file somewhere you can find it. 
 - Open QGIS and add the GeoTiff file you have just downloaded, using the **Add Raster Layer** ![Add Raster Layer tool](images/add-raster.png){ height=20 } button. 
-- QGIS will ask you what coordinate system the data are in - select **OSGB 1936 / British National Grid, EPSG:27700**. Type **27700** into the search bar, select the correct entry and click ok. 
+- QGIS will ask you what coordinate system the data are in - select **OSGB 1936 / British National Grid, EPSG:27700**. Type **27700** into the filter / search bar, select the correct entry and click ok. 
 
 ![Selecting British National Grid for PopChange data](images/select-crs.png){ width=40% }
 
 The data will appear, although only in black and white. 
 
-- Right click on the raster layer, and choose **Properties**. 
+- Right click on the raster layer in the Layers Panel, and choose **Properties**. 
 - Go to the **Style** tab. 
 - Set **Render type** to **Singleband pseudocolor**. 
 - Under **Generate new color map**, select **Purples**. 
@@ -42,11 +42,11 @@ The values QGIS has in the Layers window next to each colour are mid points for 
 <!-- Comment out for future development, when we add a section on sybbolising the vector version of the data -->
 <!-- If you want a strictly categorical output, then it is better to use the shapefile output (see below). -->
 
-QGIS supports many different colour options. ColorBrewer is a range of very useful pallets, designed to ensure that all of the colours are distinctive and clear. I would recommened having a look at [ColorBrewer.org](http://ColorBrewer.org) and selecting the most appropriate scheme for your map. 
+QGIS supports many different colour options. ColorBrewer is a range of very useful pallets, designed to ensure that all of the colours are distinctive and clear. I would recommend having a look at [ColorBrewer.org](http://ColorBrewer.org) and selecting the most appropriate scheme for your map. 
 
-- Once you know which colour scheme you want to you, right click on the raster layer, and choose **Properties**. 
+- Once you know which colour scheme you want to use, right click on the raster layer, and choose **Properties**. 
 - Go to the **Style** tab. 
-- Under **Generate new color map**, scroll right to the bottom and select **New color ramp**. 
+- Under **Generate new color map**, scroll right to the bottom of the drop down list and select **New color ramp**. 
 - Select **ColorBrewer** and choose **OK**. 
 - Pick the Scheme name that you want to use. I am selecting **GnBu**. 
 - Select how many colours you want - I am selecting **7**. 
@@ -59,7 +59,7 @@ The map will update with your new colour scheme. Zoom in to see the variation in
 
 ##Print Composer
 
-Now we have the data classified as we want it, we can setup the rest of the map. QGIS has a powerful tool called Print Composer which allows us to design and create a good looking map, with all the required map 'marginalia' include. These are things like the title, legend, scale, data sources, north arrow and so on. 
+Now we have the data classified as we want it, we can setup the rest of the map. QGIS has a powerful tool called Print Composer which allows us to design and create a good looking map, with all the required map 'marginalia' included. These are things like the title, legend, scale, data sources, north arrow and so on. 
 
 - Go to **Project > New Print Composer**. 
 - Give your map a name (you can have multiple maps, for example if you need to do maps of different areas or different scales) 
@@ -75,7 +75,7 @@ Now we have the data classified as we want it, we can setup the rest of the map.
  
 - All the details of the Print Composer project are saved with the project file (.qgs). It's a good idea to save your Map Project regularly. To do this, click the Save project button ![Save project](images/save-project.png){ height=20 } at the top left. *Be sure to avoid the Save as template button, which looks similar but has a green box with a white line in the bottom right corner.*
 
-- Click **Layout > Add Label** and draw a rectangle for the title at the top of the map. Under Item Properties, update the text that says QGIS to a suitable title for the map (*Changes in number of people aged X to X between X and X*). 
+- Click **Layout > Add Label** and draw a rectangle for the title at the top of the map. Under Item Properties (on the right hand side of the screen), update the text that says QGIS to a suitable title for the map (*Changes in number of people aged X to X between X and X*). 
 - Set the **Horizontal Alignment** to **Center**. 
 - Click **Font...** and select a suitable size and style for the title, such as 24. 
 - Repeat this process to add the data sources (listed below) and any other text you wish at the bottom of the page.  
@@ -116,12 +116,12 @@ To give your map some context, you can add a local authority boundary, or any ot
 
 Depending on your audience for your map, it may be valuable to provide a context map, i.e. a map showing the area of your map in the context of the UK. 
 
-- In the Map Composter, select the map and, in **Item Properties**, select the checkbox that says **Lock layers for map item**. 
+- In the Map Composer, select the map and, in **Item Properties**, select the checkbox that says **Lock layers for map item**. 
 - Return to the main QGIS window, and adjust the layers and symbology to how you wish the context map to look. 
 - Return to the Map Composer window, and click **Add new map** ![Add new map tool](images/add-new-map.png){ height=20 } and draw a rectangle where you wish the contect map to be. 
 - In **Item Properties**, scroll down **Overviews** and click the black arrow to expand the options. 
 - Click the green plus, and a new overview (Overview 1) will appear in the list. 
-- Change **Map Frame** to **Map 0** and you should see a red box appear in the context map, showing the area shown by the main map. 
+- Change **Map Frame** to **Map 0** (or **Map 1**) and you should see a red box appear in the context map, showing the area shown by the main map. 
 - Adjust the frame style to whichever colour and style you wish. I prefer an outline box showing the area. 
 - Select the context map, and make sure you select **Lock layers for map item**, as you did before. 
 
