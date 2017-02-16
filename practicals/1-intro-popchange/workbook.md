@@ -59,7 +59,7 @@ To begin with, we need to download the data from the website. I will use the 199
 - Click **1991**  
 - Right click on **5a_ascii_grid1991_Age_Age30_34.asc** and choose **Save target as...**  
 - Save the file in your My Documents folder  
-- Repeat the process for **5a_ascii_grid20160310d_GB_1981_Age30_34.asc** in the 1981 folder  
+- Repeat the process for **5a_ascii_grid1981_Age30_34.asc** in the 1981 folder  
 
 Click **Start**, type **QGIS** and click on **QGIS Desktop 2.10.1**
 
