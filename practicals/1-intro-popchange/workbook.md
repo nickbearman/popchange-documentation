@@ -120,7 +120,7 @@ We can also do the raster calculation of difference within QGIS, replicating wha
 - Start by clicking the **Add Raster Layer** ![Add Raster Layer tool](images/add-raster.png){ height=20 } button  
 - Then choose **Browse** and navigate to whichever folder you saved the data into  
 - Select the ASCII grid file for 2001 Age 25 to 29  
-- click **Open**  
+- Click **Open**  
 - QGIS will ask what coordinate system the files are stored in  
 - Type '27700' into the filter box and select 'OSGB 1936 / British National Grid'.  
 - Click **OK**.   
@@ -234,11 +234,9 @@ We can select out data for a specific local authority or any other shape file bo
 
 We can then download the data we want to use.  
 
-- On the PopChange website click the **Data** tab   
-- Click **local_authority_boundaries**  
-- Right click on one of the Local Authority zip files and choose **Save target as...**  
-- Save the file in your My Documents folder  
-- Unzip the file and open in QGIS  
+To give your map some context, you can add a local authority boundary, or any other sort of boundary. You can download these from a range of different sources, including [Ordnance Survey Open Data](https://www.ordnancesurvey.co.uk/business-and-government/products/opendata-products.html). 
+
+- Once you have your boundary shape file, add it to QGIS and choose a suitable symbology. 
 - Once the file is added, right click on the Local Authority layer and choose **Zoom to Layer**   
 - Your screen should look similar to the below:  
 
@@ -252,20 +250,6 @@ We can then download the data we want to use.
 - Click **OK**  
 
 This will create a clipped layer for your selected Local Authority. Turn off the other layers to see the output. You can apply this to any vector layer if you want to clip out a different area. 
-
-Alternatively, you can select out your own local authority from the whole data file. 
-
-- On the PopChange website click the **Data** tab     
-- Click **local_authority_boundaries**  
-- Right click on **LA_split.zip** and choose **Save target as...**  
-- Save the file into **My Documents**  
-- Extract the files  by double-clicking the file and following the instructions  
-- Open QGIS  
-- Click **Add Vector Layer...** and navigate to **My Documents > LA_split**  
-- Add the shapefile for whichever local authority you wish to use   
-- Right click on the local authority layer and choose **Zoom to Layer**   
-- Continue with the instructions above   
-
 
 Histogram
 =====
