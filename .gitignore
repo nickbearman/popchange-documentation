@@ -1,3 +1,5 @@
 *.pdf
 
 practicals/2-article-ready-map/tmp
+data/
+pop-density-2020-2000-change.tif
