@@ -31,7 +31,7 @@ http://www.worldpop.org.uk/.
 *Often government or academic data suppliers ask for people to register, so the number of users can be logged. This is fairly common, and allows the department to justify their funding, by saying "X thousand users have downloaded and used our data".* 
 
 - Enter your details, and click **Browse Individual Files** 
-- Download the 2000 data **Asia_PPP_2000_adj_v2** and the 2020 data **Asia_PPP_2020_adj_v2** 
+- Download the 2000 data **Asia_PPP_2000_adj_v2.tif** and the 2020 data **Asia_PPP_2020_adj_v2.tif** 
 - Once the data have download, extract them and save them in your working folder for today 
 
 Now we can open QGIS and load in the data. 
